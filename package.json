@@ -16,3 +16,20 @@
     "jest": "27.5.0"
   }
 }
+
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "dev dependencies"
+    },
+    {
+      "matchPackageNames": ["axios"],
+      "enabled": false
+    }
+  ]
+}
