@@ -3,10 +3,20 @@
   "extends": [
     "config:recommended"
   ],
+  "schedule": ["before 6am on monday"],
+  "timezone": "Europe/Berlin",
+  "prConcurrentLimit": 3,
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "groupName": "dev dependencies"
+      "matchUpdateTypes": ["patch"],
+      "groupName": "dev dependencies (patch)",
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "matchPackageNames": ["axios"],
+      "enabled": false
     }
   ]
 }
