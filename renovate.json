@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:base",
+    "mergeConfidence:all-badges"
   ],
   "schedule": ["before 6am on monday"],
   "timezone": "Europe/Berlin",
